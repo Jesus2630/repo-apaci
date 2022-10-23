@@ -8,6 +8,7 @@ import veterinariosRoutes from './routes/veterinariosRoutes.js'
 
 //Inicializo app
 const app = express();
+app.use(express.json());
 
 //Conecto base de datos
 conectarDB();

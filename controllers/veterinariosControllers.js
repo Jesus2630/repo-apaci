@@ -1,6 +1,16 @@
-const registrar = (req,res)=>{
+import {request,response} from 'express';
+
+const registrar = (req = request,res = response)=>{
+
+    const {nombre,password,email} = req.body
+
     res.json({
-        msg: 'Registro de usuario'
+        msg: 'Registro de usuario',
+        body :{
+            nombre,
+            password,
+            email
+        }
     }) 
 }
 
