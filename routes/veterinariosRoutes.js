@@ -1,13 +1,12 @@
 import express from "express";
 const router = express.Router();
 
-router.get('/', (req,res)=>{
-    res.send('Hola soy el api-get') 
-})
+import {perfil,registrar} from '../controllers/veterinariosControllers.js'
 
-router.get('/login', (req,res)=>{
-    res.send('Hola soy el api-get del login') 
-})
+
+router.post('/', registrar)
+
+router.get('/perfil', perfil)
 
 
 
